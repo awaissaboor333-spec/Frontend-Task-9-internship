@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ExploreNow — Discover the World</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&q=60&auto=format&fit=crop" alt="ExploreNow logo" class="logo">
+        <span class="brand-name">ExploreNow</span>
+      </div>
+
+      <nav class="nav" id="navMenu" aria-label="Main Navigation">
+        <a href="#home">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#packages">Packages</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌓</button>
+        <a href="#contact" class="btn primary">Book Now</a>
+        <button id="mobileMenuBtn" class="icon-btn mobile-only" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  
+  <section id="home" class="hero">
+    <div class="hero-overlay">
+      <div class="container hero-inner">
+        <h1>Discover the World with ExploreNow</h1>
+        <p class="lead">Carefully crafted travel experiences — find your next adventure.</p>
+
+      
+        <form id="searchForm" class="search-form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="destination">Destination</label>
+              <input id="destination" name="destination" type="text" placeholder="e.g., Paris" required>
+              <small class="error" id="destError" aria-live="polite"></small>
+            </div>
+
+            <div class="field">
+              <label for="date">Date</label>
+              <input id="date" name="date" type="date" required>
+              <small class="error" id="dateError" aria-live="polite"></small>
+            </div>
+
+            <div class="field">
+              <label for="budget">Budget ($)</label>
+              <input id="budget" name="budget" type="number" min="0" placeholder="e.g., 1500" required>
+              <small class="error" id="budgetError" aria-live="polite"></small>
+            </div>
+
+            <div class="field field-action">
+              <button type="submit" class="btn search-btn">Search</button>
+            </div>
+          </div>
+          <div id="searchMsg" class="search-msg" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="destinations" class="section container">
+    <h2 class="section-title">Popular Destinations</h2>
+    <p class="section-sub">Explore curated destinations loved by our travelers.</p>
+    <div class="grid destinations-grid">
+    
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800&q=60&auto=format&fit=crop
+" alt="Paris">
+        <div class="card-body">
+          <h3>Paris</h3>
+          <p>City of lights, museums, and romantic streets.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800&q=60&auto=format&fit=crop" alt="Bali">
+        <div class="card-body">
+          <h3>Bali</h3>
+          <p>Tropical beaches, temples, and serene landscapes.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800&q=60&auto=format&fit=crop" alt="New York">
+        <div class="card-body">
+          <h3>New York</h3>
+          <p>The city that never sleeps — culture and cuisine.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1505765051177-1e4a9b519b1b?w=800&q=60&auto=format&fit=crop" alt="Rome">
+        <div class="card-body">
+          <h3>Rome</h3>
+          <p>Ancient history, architecture, and delicious food.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1505765051177-1e4a9b519b1b?w=800&q=60&auto=format&fit=crop" alt="Tokyo">
+        <div class="card-body">
+          <h3>Tokyo</h3>
+          <p>Blend of tradition and futuristic city life.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1505765051177-1e4a9b519b1b?w=800&q=60&auto=format&fit=crop" alt="Cape Town">
+        <div class="card-body">
+          <h3>Cape Town</h3>
+          <p>Coastal beauty, Table Mountain and great wines.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+  <section id="packages" class="section container">
+    <h2 class="section-title">Featured Packages</h2>
+    <p class="section-sub">Handpicked travel packages for every traveler.</p>
+    <div class="grid packages-grid">
+      <div class="card package-card">
+        <div class="card-body">
+          <h3>Romantic Paris</h3>
+          <p class="price">$1,199</p>
+          <ul class="package-list">
+            <li>5 nights hotel</li>
+            <li>Breakfast included</li>
+            <li>City tour & Seine cruise</li>
+          </ul>
+          <a class="btn" href="#contact">Book Now</a>
+        </div>
+      </div>
+
+      <div class="card package-card highlight">
+        <div class="card-body">
+          <h3>Bali Escape</h3>
+          <p class="price">$999</p>
+          <ul class="package-list">
+            <li>7 nights resort</li>
+            <li>Island tour</li>
+            <li>Airport transfers</li>
+          </ul>
+          <a class="btn" href="#contact">Book Now</a>
+        </div>
+      </div>
+
+      <div class="card package-card">
+        <div class="card-body">
+          <h3>Safari Adventure</h3>
+          <p class="price">$1,499</p>
+          <ul class="package-list">
+            <li>6 nights safari lodge</li>
+            <li>Guided game drives</li>
+            <li>All meals included</li>
+          </ul>
+          <a class="btn" href="#contact">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section container">
+    <h2 class="section-title">What Travelers Say</h2>
+    <div class="grid testimonials-grid">
+      <blockquote class="testimonial card">
+        <div class="card-body">
+          <p>"ExploreNow planned our honeymoon perfectly. Highly recommended!"</p>
+          <footer class="t-meta">
+            <img src="images/doctor2.png" alt="Customer" class="avatar">
+            <div>
+              <strong>Sarah J.</strong>
+              <span>— New York</span>
+            </div>
+          </footer>
+        </div>
+      </blockquote>
+
+      <blockquote class="testimonial card">
+        <div class="card-body">
+          <p>"Great service, friendly guides and seamless booking process."</p>
+          <footer class="t-meta">
+            <img  src="images/doctor3.png"
+" alt="Customer" class="avatar">
+            <div>
+              <strong>Michael P.</strong>
+              <span>— London</span>
+            </div>
+          </footer>
+        </div>
+      </blockquote>
+    </div>
+  </section>
+
+  
+  <section id="contact" class="section container contact-section">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact-grid">
+      <form id="contactForm" class="contact-form" novalidate>
+        <label>
+          <span>Name</span>
+          <input type="text" id="contactName" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" id="contactEmail" required>
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea id="contactMsg" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn">Send Message</button>
+        <div id="contactMsgOut" class="small muted" aria-live="polite"></div>
+      </form>
+
+      <div class="contact-info">
+        <h3>ExploreNow</h3>
+        <p>123 Travel Ave, Suite 100<br>City, Country</p>
+        <p>Email: info@explorenow.com<br>Phone: +1 555 123 4567</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook">Facebook</a> ·
+          <a href="#" aria-label="Instagram">Instagram</a> ·
+          <a href="#" aria-label="Twitter">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> ExploreNow. All rights reserved.</div>
+      <nav class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#packages">Packages</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+ 
+  <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
